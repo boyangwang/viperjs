@@ -1,13 +1,16 @@
 'use strict';
 const React = require('react');
+const ViperjsNavbar = require('./ViperjsNavbar.react.js');
 
-let TodoApp = module.exports = React.createClass({
+let ViperjsApp = module.exports = React.createClass({
     displayName: 'ViperjsApp',
-    render: function() {
+    render: () => {
         return React.createElement(
-            'div',
-            null,
-            'ViperjsApp'
+            'div', {
+                className: 'viperjs-container',
+                style: containerStyle,
+            },
+            React.createElement(ViperjsNavbar, null)
         );
     }
 });
