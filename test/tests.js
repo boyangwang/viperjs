@@ -10,7 +10,7 @@ describe('Sanity', () => {
         expect(true).equal(true);
     });
 });
-describe('Viper.js integration', () => {
+describe('ViperJS integration test', () => {
     before((done) => {
         app.server.on('listening', () => done());
         if (app.server.listening) done();

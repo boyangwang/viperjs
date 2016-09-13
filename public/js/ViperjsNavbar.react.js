@@ -84,7 +84,7 @@ let ViperjsNavbar = module.exports = React.createClass({
                         className: 'viperjs-navbar-title',
                         style: h1Style
                     },
-                    "Viper.js"
+                    "ViperJS"
                 )
             ),
             React.createElement(
