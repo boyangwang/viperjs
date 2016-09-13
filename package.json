@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "mocha --recursive"
+    "test": "mocha --recursive",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -22,10 +23,16 @@
   "homepage": "https://github.com/boyangwang/viperjs#readme",
   "dependencies": {
     "express": "^4.14.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
     "request": "^2.74.0",
-    "request-promise": "^4.1.1"
+    "request-promise": "^4.1.1",
+    "webpack": "^1.13.2"
   },
   "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
     "chai": "^3.5.0",
     "mocha": "^3.0.2"
   }
