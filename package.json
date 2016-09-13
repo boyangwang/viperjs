@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha --recursive",
-    "webpack": "webpack"
+    "webpack": "webpack --watch"
   },
   "repository": {
     "type": "git",
