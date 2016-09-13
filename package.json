@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/boyangwang/viperjs#readme",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^3.0.2"
   }
 }
