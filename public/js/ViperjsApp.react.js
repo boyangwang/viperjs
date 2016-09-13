@@ -7,8 +7,7 @@ let ViperjsApp = module.exports = React.createClass({
     render: () => {
         return React.createElement(
             'div', {
-                className: 'viperjs-container',
-                style: containerStyle,
+                className: 'viperjs-container'
             },
             React.createElement(ViperjsNavbar, null)
         );
