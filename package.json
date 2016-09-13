@@ -1,0 +1,26 @@
+{
+  "name": "viperjs",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boyangwang/viperjs.git"
+  },
+  "author": "boyang",
+  "contributors": [
+    "boyang",
+    "yingchi"
+  ],
+  "license": "CC-BY-NC-4.0",
+  "bugs": {
+    "url": "https://github.com/boyangwang/viperjs/issues"
+  },
+  "homepage": "https://github.com/boyangwang/viperjs#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
