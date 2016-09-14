@@ -9,7 +9,7 @@
     "webpack": "webpack --watch",
     "eslint": "./node_modules/.bin/eslint --fix",
     "eslint-all": "./node_modules/.bin/eslint --fix .",
-    "start": "node app.js"
+    "start": "node --use-strict app.js"
   },
   "engines": {
     "node": ">=6.0.0"
