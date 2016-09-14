@@ -5,11 +5,19 @@ const ReactRedux = require('react-redux');
 class ViperjsOutputTokenized extends React.Component {
     render() {
         return React.createElement(
-            'div', {}, JSON.stringify(this.props.inputs, null, 2));
+            'div',
+            null,
+            JSON.stringify(this.props.inputs, null, 2),
+            JSON.stringify(this.props.outputTokenized, null, 2)
+        );
     }
 }
 ViperjsOutputTokenized.propTypes = {
     inputs: React.PropTypes.arrayOf(React.PropTypes.string),
+    outputTokenized: React.PropTypes.oneOfType([
+        React.PropTypes.string,
+        React.PropTypes.object,
+    ]),
 };
 const mapStateToProps = (state) => {
     return {
