@@ -1,11 +1,11 @@
 'use strict';
 const React = require('react');
 
-let ViperjsOutputParsed = module.exports = React.createClass({
-    displayName: 'ViperjsOutputParsed',
-    render: function() {
+class ViperjsOutputParsed extends React.component {
+    render() {
         return React.createElement(
             'div'
         );
     }
-});
+}
+module.exports = ViperjsOutputParsed;

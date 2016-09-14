@@ -4,18 +4,18 @@ const ViperInput = require('./ViperjsInput.react.js');
 const ViperOutputTokens = require('./ViperjsOutputTokenized.react.js');
 const ViperOutputParsedTrees = require('./ViperjsOutputParsed.react.js');
 
-let ViperjsInputOutput = module.exports = React.createClass({
-    displayName: 'ViperjsInputOutput',
-    render: function() {
+class ViperjsInputOutput extends React.component {
+    render() {
         return React.createElement(
             'div', {
                 style: {
-                    marginTop: '3.75em'
-                }
+                    marginTop: '3.75em',
+                },
             },
             React.createElement(ViperInput),
             React.createElement(ViperOutputTokens),
             React.createElement(ViperOutputParsedTrees)
         );
     }
-});
+}
+module.exports = ViperjsInputOutput;

@@ -2,17 +2,16 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
 
-let ViperjsOutputTokenized = React.createClass({
-    displayName: 'ViperjsOutputTokenized',
-    render: function() {
+class ViperjsOutputTokenized extends React.component {
+    render() {
         return React.createElement(
             'div', {}, JSON.stringify(this.props.inputs, null, 2));
     }
-});
-let mapStateToProps = (state) => {
+}
+const mapStateToProps = (state) => {
     return {
         outputTokenized: state.outputTokenized,
-        inputs: state.inputs
+        inputs: state.inputs,
     };
 };
-let ViperjsOutputTokenizedConnected = module.exports = ReactRedux.connect(mapStateToProps)(ViperjsOutputTokenized);
+module.exports = ReactRedux.connect(mapStateToProps)(ViperjsOutputTokenized);

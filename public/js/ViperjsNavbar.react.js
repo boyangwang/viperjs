@@ -1,17 +1,16 @@
 'use strict';
 const React = require('react');
 
-let ViperjsNavbar = module.exports = React.createClass({
-    displayName: 'ViperjsNavbar',
-    render: function() {
-        let commonMarginPaddingVerticalAlignBoxSizingStyle = {
+class ViperjsNavbar extends React.component {
+    render() {
+        const commonMarginPaddingVerticalAlignBoxSizingStyle = {
             border: '0',
             boxSizing: 'border-box',
             margin: '0',
             padding: '0',
             verticalAlign: 'baseline',
         };
-        let navbarStyle = Object.assign({}, commonMarginPaddingVerticalAlignBoxSizingStyle, {
+        const navbarStyle = Object.assign({}, commonMarginPaddingVerticalAlignBoxSizingStyle, {
             background: 'rgba(55,61,73,0.975)',
             color: '#fff',
             fontSize: '100%',
@@ -22,13 +21,13 @@ let ViperjsNavbar = module.exports = React.createClass({
             width: '100%',
             zIndex: '9999',
         });
-        let commonNavbarLeftRightStyle = Object.assign({}, commonMarginPaddingVerticalAlignBoxSizingStyle, {
+        const commonNavbarLeftRightStyle = Object.assign({}, commonMarginPaddingVerticalAlignBoxSizingStyle, {
             overflow: 'hidden',
             position: 'absolute',
             top: '0.5em',
             whiteSpace: 'nowrap',
         });
-        let h1Style = Object.assign({}, commonMarginPaddingVerticalAlignBoxSizingStyle, {
+        const h1Style = Object.assign({}, commonMarginPaddingVerticalAlignBoxSizingStyle, {
             display: 'inline-block',
             fontFamily: '"proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif',
             fontSize: '2em',
@@ -37,7 +36,7 @@ let ViperjsNavbar = module.exports = React.createClass({
             lineHeight: '1.375em',
             margin: '0 0.5em',
         });
-        let linkStyle = {
+        const linkStyle = {
             color: '#fff',
             display: 'inline-block',
             fontFamily: '"proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif',
@@ -48,46 +47,47 @@ let ViperjsNavbar = module.exports = React.createClass({
             whiteSpace: 'nowrap',
         };
         return React.createElement(
-            "header", {
+            'header', {
                 className: 'viperjs-navbar',
-                style: navbarStyle
+                style: navbarStyle,
             },
             React.createElement(
-                "div", {
-                    className: "viperjs-navbar-left",
+                'div', {
+                    className: 'viperjs-navbar-left',
                     style: Object.assign({
-                        left: '0.5em'
-                    }, commonNavbarLeftRightStyle)
+                        left: '0.5em',
+                    }, commonNavbarLeftRightStyle),
                 },
                 React.createElement(
-                    "h1", {
+                    'h1', {
                         className: 'viperjs-navbar-title',
-                        style: h1Style
+                        style: h1Style,
                     },
-                    "ViperJS"
+                    'ViperJS'
                 )
             ),
             React.createElement(
-                "div", {
-                    className: "viperjs-navbar-right",
+                'div', {
+                    className: 'viperjs-navbar-right',
                     style: Object.assign({
-                        right: '0.5em'
-                    }, commonNavbarLeftRightStyle)
+                        right: '0.5em',
+                    }, commonNavbarLeftRightStyle),
                 },
                 React.createElement(
-                    "div", {
-                        className: "viperjs-navbar-links",
+                    'div', {
+                        className: 'viperjs-navbar-links',
                     },
                     React.createElement(
-                        "a", {
-                            href: "/about",
-                            className: "viperjs-navbar-link",
-                            style: linkStyle
+                        'a', {
+                            href: '/about',
+                            className: 'viperjs-navbar-link',
+                            style: linkStyle,
                         },
-                        "About"
+                        'About'
                     )
                 )
             )
         );
     }
-});
+}
+module.exports = ViperjsNavbar;
