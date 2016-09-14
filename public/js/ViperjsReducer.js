@@ -1,4 +1,5 @@
 'use strict';
+const esprima = require('esprima');
 
 const initialState = {
     inputs: [],
@@ -6,13 +7,14 @@ const initialState = {
 module.exports = (state, action) => {
     const oldState = state || initialState;
     const newState = Object.assign({}, oldState);
-    switch (action.type) {
-    case 'input':
-        if (action.value && state.inputs.slice(-1)[0] !== action.value) {
-            newState.inputs = [...state.inputs, action.value];
+    if (action.type === 'input') {
+        const input = action.value;
+        if (input && state.inputs.slice(-1)[0] !== input) {
+            newState.inputs = [...state.inputs, input];
+            newState.outputTokenized = esprima.tokenize(input);
+            newState.outputParsed = esprima.parse(input);
             return newState;
         }
-    default:
     }
     return oldState;
 };
