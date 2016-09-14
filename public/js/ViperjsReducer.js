@@ -11,8 +11,16 @@ module.exports = (state, action) => {
         const input = action.value;
         if (input && state.inputs.slice(-1)[0] !== input) {
             newState.inputs = [...state.inputs, input];
-            newState.outputTokenized = esprima.tokenize(input);
-            newState.outputParsed = esprima.parse(input);
+            try {
+                newState.outputTokenized = esprima.tokenize(input);
+            } catch (e) {
+                newState.outputTokenized = e;
+            }
+            try {
+                newState.outputParsed = esprima.parse(input);
+            } catch (e) {
+                newState.outputParsed = e;
+            }
             return newState;
         }
     }
