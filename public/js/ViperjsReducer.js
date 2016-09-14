@@ -14,5 +14,5 @@ module.exports = (state, action) => {
         }
     default:
     }
-    return state;
+    return oldState;
 };
