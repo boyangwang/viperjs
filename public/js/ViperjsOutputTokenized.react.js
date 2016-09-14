@@ -15,7 +15,7 @@ class ViperjsOutputTokenized extends React.Component {
 ViperjsOutputTokenized.propTypes = {
     inputs: React.PropTypes.arrayOf(React.PropTypes.string),
     outputTokenized: React.PropTypes.oneOfType([
-        React.PropTypes.string,
+        React.PropTypes.array,
         React.PropTypes.object,
     ]),
 };
