@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "full-build": "npm install && webpack && mocha --recursive",
+    "full-build": "npm install && webpack && mocha --recursive && ./node_modules/.bin/eslint --fix .",
     "test": "mocha --recursive",
     "webpack": "webpack --watch",
     "eslint": "./node_modules/.bin/eslint --fix",
