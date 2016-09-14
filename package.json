@@ -4,8 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "full-build": "npm install && webpack && mocha --recursive",
     "test": "mocha --recursive",
-    "webpack": "webpack --watch"
+    "webpack": "webpack --watch",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
