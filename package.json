@@ -7,6 +7,8 @@
     "full-build": "npm install && webpack && mocha --recursive",
     "test": "mocha --recursive",
     "webpack": "webpack --watch",
+    "eslint": "./node_modules/.bin/eslint --fix",
+    "eslint-all": "./node_modules/.bin/eslint --fix .",
     "start": "node app.js"
   },
   "engines": {
