@@ -3,7 +3,7 @@ const React = require('react');
 
 let ViperjsNavbar = module.exports = React.createClass({
     displayName: 'ViperjsNavbar',
-    render: () => {
+    render: function() {
         let commonMarginPaddingVerticalAlignBoxSizingStyle = {
             border: '0',
             boxSizing: 'border-box',
@@ -17,7 +17,7 @@ let ViperjsNavbar = module.exports = React.createClass({
             fontSize: '100%',
             height: '3.75em',
             left: '0',
-            position: 'fixed',
+            position: 'absolute',
             top: '0',
             width: '100%',
             zIndex: '9999',
