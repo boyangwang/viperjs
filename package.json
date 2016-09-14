@@ -4,11 +4,12 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "full-build": "npm install && webpack && mocha --recursive && ./node_modules/.bin/eslint --fix .",
+    "full-build": "npm install && webpack && mocha --recursive && node ./node_modules/eslint/bin/eslint.js --fix .",
     "test": "mocha --recursive",
     "webpack": "webpack --watch",
-    "eslint": "./node_modules/.bin/eslint --fix",
-    "eslint-all": "./node_modules/.bin/eslint --fix .",
+    "eslint": "node ./node_modules/eslint/bin/eslint.js --fix",
+    "eslint-all": "node ./node_modules/eslint/bin/eslint.js --fix .",
+    "env": "env",
     "start": "node --use-strict app.js"
   },
   "engines": {
