@@ -1,7 +1,7 @@
 'use strict';
 const React = require('react');
 
-class ViperjsNavbar extends React.component {
+class ViperjsNavbar extends React.Component {
     render() {
         const commonMarginPaddingVerticalAlignBoxSizingStyle = {
             border: '0',

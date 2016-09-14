@@ -4,7 +4,7 @@ const ViperInput = require('./ViperjsInput.react.js');
 const ViperOutputTokens = require('./ViperjsOutputTokenized.react.js');
 const ViperOutputParsedTrees = require('./ViperjsOutputParsed.react.js');
 
-class ViperjsInputOutput extends React.component {
+class ViperjsInputOutput extends React.Component {
     render() {
         return React.createElement(
             'div', {
