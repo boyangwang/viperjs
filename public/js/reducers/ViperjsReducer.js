@@ -1,12 +1,11 @@
 'use strict';
 const esprima = require('esprima');
 
-const initialState = {
+module.exports.initialState = {
     historyInputs: [],
     currentInput: '',
 };
-module.exports = (state, action) => {
-    const oldState = state || initialState;
+module.exports.reducer = (oldState, action) => {
     const newState = Object.assign({}, oldState);
     if (action.type === 'input') {
         const input = action.value;

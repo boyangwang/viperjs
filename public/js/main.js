@@ -8,5 +8,5 @@ const ViperjsApp = require('./components/ViperjsApp.js');
 const ViperjsReducer = require('./reducers/ViperjsReducer.js');
 
 ReactDOM.render(React.createElement(ReactRedux.Provider, {
-    store: Redux.createStore(ViperjsReducer),
+    store: Redux.createStore(ViperjsReducer.reducer, ViperjsReducer.initialState),
 }, React.createElement(ViperjsApp)), document.getElementById('viperjs-wrapper'));
