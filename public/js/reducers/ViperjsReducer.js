@@ -2,7 +2,7 @@
 const esprima = require('esprima');
 
 const initialState = {
-    inputs: [],
+    historyInputs: [],
     currentInput: '',
 };
 module.exports = (state, action) => {
@@ -15,8 +15,8 @@ module.exports = (state, action) => {
             return newState;
         }
     } else if (action.type === 'start') {
-        if (oldState.inputs[oldState.inputs.length - 1] !== oldState.currentInput) {
-            newState.inputs = [...oldState.inputs, oldState.currentInput];
+        if (oldState.historyInputs[oldState.historyInputs.length - 1] !== oldState.currentInput) {
+            newState.historyInputs = [...oldState.historyInputs, oldState.currentInput];
             try {
                 newState.outputTokenized = esprima.tokenize(oldState.currentInput);
             } catch (e) {

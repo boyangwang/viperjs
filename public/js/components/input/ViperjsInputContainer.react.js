@@ -2,6 +2,7 @@
 const React = require('react');
 const ViperjsInputTextarea = require('./ViperjsInputTextarea.react.js');
 const ViperjsInputStartButton = require('./ViperjsInputStartButton.react.js');
+const ViperjsInputHistoryInputs = require('./ViperjsInputHistoryInputs.react.js');
 
 class ViperjsInput extends React.Component {
     render() {
@@ -9,7 +10,8 @@ class ViperjsInput extends React.Component {
             'div',
             null,
             React.createElement(ViperjsInputTextarea),
-            React.createElement(ViperjsInputStartButton)
+            React.createElement(ViperjsInputStartButton),
+            React.createElement(ViperjsInputHistoryInputs)
         );
     }
 }
