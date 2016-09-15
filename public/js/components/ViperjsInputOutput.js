@@ -1,8 +1,8 @@
 'use strict';
 const React = require('react');
-const ViperjsInput = require('./input/ViperjsInputContainer.react.js');
-const ViperjsOutputTokens = require('./output/ViperjsOutputTokenized.react.js');
-const ViperjsOutputParsedTrees = require('./output/ViperjsOutputParsed.react.js');
+const ViperjsInput = require('./input/ViperjsInputContainer.js');
+const ViperjsOutputTokens = require('./output/ViperjsOutputTokenized.js');
+const ViperjsOutputParsedTrees = require('./output/ViperjsOutputParsed.js');
 
 class ViperjsInputOutput extends React.Component {
     render() {

@@ -1,7 +1,7 @@
 'use strict';
 const React = require('react');
-const ViperjsNavbar = require('./ViperjsNavbar.react.js');
-const ViperjsInputOutput = require('./ViperjsInputOutput.react.js');
+const ViperjsNavbar = require('./ViperjsNavbar.js');
+const ViperjsInputOutput = require('./ViperjsInputOutput.js');
 
 class ViperjsApp extends React.Component {
     render() {

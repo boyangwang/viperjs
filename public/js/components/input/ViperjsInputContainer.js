@@ -1,8 +1,8 @@
 'use strict';
 const React = require('react');
-const ViperjsInputTextarea = require('./ViperjsInputTextarea.react.js');
-const ViperjsInputStartButton = require('./ViperjsInputStartButton.react.js');
-const ViperjsInputHistoryInputs = require('./ViperjsInputHistoryInputs.react.js');
+const ViperjsInputTextarea = require('./ViperjsInputTextarea.js');
+const ViperjsInputStartButton = require('./ViperjsInputStartButton.js');
+const ViperjsInputHistoryInputs = require('./ViperjsInputHistoryInputs.js');
 
 class ViperjsInput extends React.Component {
     render() {
