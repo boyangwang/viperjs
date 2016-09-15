@@ -20,7 +20,8 @@ module.exports = {
         "class-methods-use-this": "off",
         "max-len": ["error", {"code": 120, "comments": 120}],
         "arrow-body-style": "off",
-        "no-fallthrough": "off"
+        "no-fallthrough": "off",
+        "linebreak-style": "off"
     },
     "parserOptions": {
         "sourceType": "script"
