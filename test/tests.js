@@ -15,19 +15,42 @@ describe('ViperJS integration test', () => {
         app.server.on('listening', () => done());
         if (app.server.listening) done();
     });
-    it('should server static files', (done) => {
-        req({ uri: 'http://localhost:7030/index.html' })
-            .then(res => new Promise((resolve, reject) => {
-                fs.readFile(path.join(__dirname, '../public', 'index.html'), 'utf8', (err, data) => {
-                    if (err) {
-                        reject(err);
+    const publicDirectoryPath = path.join(__dirname, '../public');
+    function expectServeStaticFile(urlpath, filepath) {
+        describe('should server static files', () => {
+            it(`should serve ${filepath}`, (done) => {
+                req({ uri: urlpath })
+                    .then(res => new Promise((resolve, reject) => {
+                        fs.readFile(filepath, 'utf8', (err, data) => {
+                            if (err) {
+                                reject(err);
+                            } else {
+                                resolve({ file: data, res });
+                            }
+                        });
+                    }))
+                    .then((results) => { expect(results.file).equal(results.res); })
+                    .then(done)
+                    .catch(reason => done(reason));
+            });
+        });
+    }
+    function expectServeStaticFilesRecursive(directory) {
+        fs.readdir(directory, (err, files) => {
+            if (err) {
+                expect.fail();
+            } else {
+                for (const file of files) {
+                    if (!fs.statSync(path.join(directory, file)).isDirectory()) {
+                        const currentFilePath = path.join(directory, file);
+                        expectServeStaticFile(`http://localhost:7030/${path.relative(
+                            publicDirectoryPath, currentFilePath).replace(/\\/g, '/')}`, currentFilePath);
                     } else {
-                        resolve({ file: data, res });
+                        expectServeStaticFilesRecursive(path.join(directory, file));
                     }
-                });
-            }))
-            .then((results) => { expect(results.file).equal(results.res); })
-            .then(done)
-            .catch(reason => done(reason));
-    });
+                }
+            }
+        });
+    }
+    expectServeStaticFilesRecursive(publicDirectoryPath);
 });
