@@ -2,7 +2,7 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
 
-class ViperjsInput extends React.Component {
+class ViperjsInputTextarea extends React.Component {
     render() {
         return React.createElement(
             'textarea', {
@@ -15,7 +15,7 @@ class ViperjsInput extends React.Component {
             });
     }
 }
-ViperjsInput.propTypes = {
+ViperjsInputTextarea.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
 };
-module.exports = ReactRedux.connect()(ViperjsInput);
+module.exports = ReactRedux.connect()(ViperjsInputTextarea);
