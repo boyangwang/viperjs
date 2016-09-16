@@ -1,5 +1,4 @@
-# ViperJS
-
+# ViperJS [![Build Status](https://travis-ci.org/boyangwang/viperjs.svg?branch=master)](https://travis-ci.org/boyangwang/viperjs)
 ## Build and Run
 1. `git clone https://github.com/boyangwang/viperjs.git`
 2. `cd viperjs`
