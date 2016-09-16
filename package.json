@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "full-build": "npm install && node ./node_modules/webpack/bin/webpack.js && node ./node_modules/mocha/bin/mocha --recursive && node ./node_modules/eslint/bin/eslint.js --fix .",
-    "test": "node ./node_modules/mocha/bin/mocha --recursive",
+    "full-build": "npm install && node ./node_modules/webpack/bin/webpack.js && node ./node_modules/mocha/bin/mocha && node ./node_modules/eslint/bin/eslint.js --fix .",
+    "test": "node ./node_modules/mocha/bin/mocha",
     "webpack": "node ./node_modules/webpack/bin/webpack.js --watch",
     "eslint": "node ./node_modules/eslint/bin/eslint.js --fix",
     "eslint-all": "node ./node_modules/eslint/bin/eslint.js --fix .",
