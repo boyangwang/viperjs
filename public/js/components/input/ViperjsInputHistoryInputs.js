@@ -13,7 +13,7 @@ class ViperjsInputHistoryInputs extends React.Component {
     }
 }
 ViperjsInputHistoryInputs.propTypes = {
-    historyInputs: React.PropTypes.arrayOf(React.PropTypes.string),
+    historyInputs: React.PropTypes.arrayOf(React.PropTypes.object),
 };
 const mapStateToProps = (state) => {
     return {
