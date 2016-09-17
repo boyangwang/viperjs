@@ -13,18 +13,13 @@ module.exports.reducer = (oldState, action) => {
             newState.currentInput = input;
             return newState;
         }
-    } else if (action.type === 'start') {
+    } else if (action.type === 'tokenize') {
         if (oldState.historyInputs[oldState.historyInputs.length - 1] !== oldState.currentInput) {
             newState.historyInputs = [...oldState.historyInputs, oldState.currentInput];
             try {
                 newState.outputTokenized = esprima.tokenize(oldState.currentInput);
             } catch (e) {
                 newState.outputTokenized = e;
-            }
-            try {
-                newState.outputParsed = esprima.parse(oldState.currentInput);
-            } catch (e) {
-                newState.outputParsed = e;
             }
             return newState;
         }

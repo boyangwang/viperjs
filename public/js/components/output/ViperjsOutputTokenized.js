@@ -6,7 +6,7 @@ class ViperjsOutputTokenized extends React.Component {
     render() {
         return React.createElement(
             'div', {
-                className: 'viperjs-output-parsed',
+                className: 'viperjs-output-tokenized',
             },
             JSON.stringify(this.props.outputTokenized, null, 2)
         );
