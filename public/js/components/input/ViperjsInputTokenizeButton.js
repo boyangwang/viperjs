@@ -2,7 +2,7 @@
 const React = require('react');
 const ReactRedux = require('react-redux');
 
-class ViperjsInputStartButton extends React.Component {
+class ViperjsInputTokenizeButton extends React.Component {
     render() {
         return React.createElement(
             'button', {
@@ -16,7 +16,7 @@ class ViperjsInputStartButton extends React.Component {
             'Start');
     }
 }
-ViperjsInputStartButton.propTypes = {
+ViperjsInputTokenizeButton.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
 };
-module.exports = ReactRedux.connect()(ViperjsInputStartButton);
+module.exports = ReactRedux.connect()(ViperjsInputTokenizeButton);
