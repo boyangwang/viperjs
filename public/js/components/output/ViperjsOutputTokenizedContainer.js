@@ -1,6 +1,7 @@
 'use strict';
 const React = require('react');
 const ViperjsOutputTokenized = require('./ViperjsOutputTokenized.js');
+const ViperjsOutputParseButton = require('./ViperjsOutputParseButton.js');
 
 class ViperjsOutputTokenizedContainer extends React.Component {
     render() {
@@ -8,7 +9,8 @@ class ViperjsOutputTokenizedContainer extends React.Component {
             'div', {
                 className: 'viperjs-output-tokenized-container',
             },
-            React.createElement(ViperjsOutputTokenized)
+            React.createElement(ViperjsOutputTokenized),
+            React.createElement(ViperjsOutputParseButton)
         );
     }
 }
