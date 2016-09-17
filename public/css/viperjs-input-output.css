@@ -1,0 +1,13 @@
+.viperjs-input-container, .viperjs-output-tokenized, .viperjs-output-parsed {
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid;
+    vertical-align:top;
+}
+@media (min-width: 768px) {
+    .viperjs-input-container, .viperjs-output-tokenized, .viperjs-output-parsed {
+        width: 33%;
+        /*float: left;*/
+        display: inline-block;
+    }
+}

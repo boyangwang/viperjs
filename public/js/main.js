@@ -1,5 +1,6 @@
 'use strict';
 require('../css/fonts.css');
+require('../css/viperjs-input-output.css');
 require('jquery');
 const React = require('react');
 const ReactDOM = require('react-dom');
