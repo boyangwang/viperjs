@@ -5,11 +5,6 @@ const req = require('request-promise');
 const fs = require('fs');
 const path = require('path');
 
-describe('Sanity', () => {
-    it('should be sane', () => {
-        expect(true).equal(true);
-    });
-});
 describe('ViperJS integration test', () => {
     before((done) => {
         app.server.on('listening', () => done());
