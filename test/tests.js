@@ -53,4 +53,6 @@ describe('ViperJS integration test', () => {
         });
     }
     expectServeStaticFilesRecursive(publicDirectoryPath);
+    expectServeStaticFile('http://localhost:7030/js/babel-polyfill.min.js', path.join(
+        __dirname, '../node_modules/babel-polyfill/dist/polyfill.min.js'));
 });
