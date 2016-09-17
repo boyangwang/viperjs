@@ -6,6 +6,7 @@ class ViperjsInputStartButton extends React.Component {
     render() {
         return React.createElement(
             'button', {
+                className: 'viperjs-input-start-button',
                 onClick: () => {
                     this.props.dispatch({
                         type: 'start',

@@ -8,6 +8,7 @@ class ViperjsInputOutput extends React.Component {
     render() {
         return React.createElement(
             'div', {
+                className: 'viperjs-input-output',
                 style: {
                     marginTop: '3.75em',
                 },

@@ -7,8 +7,9 @@ const ViperjsInputHistoryInputs = require('./ViperjsInputHistoryInputs.js');
 class ViperjsInput extends React.Component {
     render() {
         return React.createElement(
-            'div',
-            null,
+            'div', {
+                className: 'viperjs-input-container',
+            },
             React.createElement(ViperjsInputTextarea),
             React.createElement(ViperjsInputStartButton),
             React.createElement(ViperjsInputHistoryInputs)

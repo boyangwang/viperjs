@@ -5,8 +5,9 @@ const ReactRedux = require('react-redux');
 class ViperjsOutputParsed extends React.Component {
     render() {
         return React.createElement(
-            'div',
-            null,
+            'div', {
+                className: 'viperjs-output-parsed',
+            },
             JSON.stringify(this.props.outputParsed, null, 2)
         );
     }
