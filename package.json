@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/boyangwang/viperjs#readme",
   "dependencies": {
+    "babel-polyfill": "^6.13.0",
     "esprima": "^3.0.0",
     "express": "^4.14.0",
     "jquery": "^3.1.0",
