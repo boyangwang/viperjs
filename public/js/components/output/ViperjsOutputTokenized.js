@@ -1,6 +1,7 @@
 'use strict';
 const React = require('react');
 const ReactRedux = require('react-redux');
+const viperjsUtil = require('../../viperjs-util.js');
 
 class ViperjsOutputTokenized extends React.Component {
     render() {

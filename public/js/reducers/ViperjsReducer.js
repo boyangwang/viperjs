@@ -1,5 +1,6 @@
 'use strict';
 const esprima = require('esprima');
+const viperjsUtil = require('../viperjs-util.js');
 
 module.exports.initialState = {
     historyInputs: [],
