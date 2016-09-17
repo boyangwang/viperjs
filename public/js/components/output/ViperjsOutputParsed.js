@@ -9,19 +9,20 @@ class ViperjsOutputParsed extends React.Component {
             'div', {
                 className: 'viperjs-output-parsed',
             },
-            JSON.stringify(this.props.outputParsed, null, 2)
+            JSON.stringify(viperjsUtil.peek(
+                this.props.historyParseds), null, 2),
+            React.createElement('br'),
+            React.createElement('br'),
+            JSON.stringify(this.props.historyParseds, null, 2)
         );
     }
 }
 ViperjsOutputParsed.propTypes = {
-    outputParsed: React.PropTypes.oneOfType([
-        React.PropTypes.array,
-        React.PropTypes.object,
-    ]),
+    historyParseds: React.PropTypes.arrayOf(React.PropTypes.object),
 };
 const mapStateToProps = (state) => {
     return {
-        outputParsed: state.outputParsed,
+        historyParseds: state.historyParseds,
     };
 };
 module.exports = ReactRedux.connect(mapStateToProps)(ViperjsOutputParsed);

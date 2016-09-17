@@ -9,19 +9,20 @@ class ViperjsOutputTokenized extends React.Component {
             'div', {
                 className: 'viperjs-output-tokenized',
             },
-            JSON.stringify(this.props.outputTokenized, null, 2)
+            JSON.stringify(viperjsUtil.peek(
+                this.props.historyTokenizeds), null, 2),
+            React.createElement('br'),
+            React.createElement('br'),
+            JSON.stringify(this.props.historyTokenizeds, null, 2)
         );
     }
 }
 ViperjsOutputTokenized.propTypes = {
-    outputTokenized: React.PropTypes.oneOfType([
-        React.PropTypes.array,
-        React.PropTypes.object,
-    ]),
+    historyTokenizeds: React.PropTypes.arrayOf(React.PropTypes.object),
 };
 const mapStateToProps = (state) => {
     return {
-        outputTokenized: state.outputTokenized,
+        historyTokenizeds: state.historyTokenizeds,
     };
 };
 module.exports = ReactRedux.connect(mapStateToProps)(ViperjsOutputTokenized);
