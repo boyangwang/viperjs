@@ -9,7 +9,7 @@
     "stop": "forever stop viperjs",
 
     "mocha": "node ./node_modules/mocha/bin/mocha",
-    "casper": "python ./node_modules/casperjs/bin/casperjs test ./test/casper/tests.js",
+    "casper": "npm start && sleep 5 && python ./node_modules/casperjs/bin/casperjs test ./test/casper/tests.js && sleep 20 && npm stop",
     "test": "npm run mocha && npm run casper",
 
     "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --watch",
