@@ -6,10 +6,6 @@ casper.on('remote.message', function(message) {
 casper.on('page.error', function(e) {
     this.echo(e);
 });
-casper.test.begin('Sanity', 1, function suite(test) {
-    test.assertEquals(true, true, 'should be sane');
-    test.done();
-});
 casper.test.begin('ViperJS', 9, function suite(test) {
     casper
         .start('http://localhost:7030/', function() {
