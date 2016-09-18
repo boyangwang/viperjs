@@ -1,7 +1,6 @@
 .viperjs-input-container, .viperjs-output-tokenized-container, .viperjs-output-parsed-container {
     width: 100%;
     min-height: 200px;
-    border: 1px solid;
     vertical-align:top;
     padding: 1em;
     box-sizing: border-box;
