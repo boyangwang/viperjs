@@ -1,6 +1,7 @@
 'use strict';
 const React = require('react');
-const ViperjsOutputTokenized = require('./ViperjsOutputTokenized.js');
+const ViperjsOutputCurrentTokenized = require('./ViperjsOutputCurrentTokenized.js');
+const ViperjsOutputHistoryTokenizeds = require('./ViperjsOutputHistoryTokenizeds.js');
 const ViperjsOutputParseButton = require('./ViperjsOutputParseButton.js');
 
 class ViperjsOutputTokenizedContainer extends React.Component {
@@ -9,7 +10,8 @@ class ViperjsOutputTokenizedContainer extends React.Component {
             'div', {
                 className: 'viperjs-output-tokenized-container',
             },
-            React.createElement(ViperjsOutputTokenized),
+            React.createElement(ViperjsOutputCurrentTokenized),
+            React.createElement(ViperjsOutputHistoryTokenizeds),
             React.createElement(ViperjsOutputParseButton)
         );
     }
