@@ -34,7 +34,7 @@ class ViperjsNavbar extends React.Component {
             fontWeight: '600',
             letterSpacing: '-0.5px',
             lineHeight: '1.375em',
-            margin: '0 0.5em',
+            margin: '0 0.5em 0 0.2em',
         });
         const linkStyle = {
             color: '#fff',
@@ -45,6 +45,11 @@ class ViperjsNavbar extends React.Component {
             padding: '0 1.5em',
             textDecoration: 'none',
             whiteSpace: 'nowrap',
+        };
+        const logoStyle = {
+            height: '2em',
+            width: '2em',
+            verticalAlign: 'text-bottom',
         };
         return React.createElement(
             'header', {
@@ -58,6 +63,14 @@ class ViperjsNavbar extends React.Component {
                         left: '0.5em',
                     }, commonNavbarLeftRightStyle),
                 },
+                React.createElement(
+                    'img', {
+                        className: 'viperjs-navbar-logo',
+                        style: logoStyle,
+                        src: 'img/logo.png',
+                        alt: 'ViperJS logo',
+                    }
+                ),
                 React.createElement(
                     'h1', {
                         className: 'viperjs-navbar-title',
