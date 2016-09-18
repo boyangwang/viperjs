@@ -23,7 +23,7 @@ class ViperjsInputEditor extends React.Component {
                 className: 'viperjs-input-editor',
                 style: {
                     width: '100%',
-                    minHeight: '200px',
+                    minHeight: '400px',
                 },
             }
         );

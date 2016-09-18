@@ -11,8 +11,8 @@ class ViperjsOutputTokenizedContainer extends React.Component {
                 className: 'viperjs-output-tokenized-container',
             },
             React.createElement(ViperjsOutputCurrentTokenized),
-            React.createElement(ViperjsOutputHistoryTokenizeds),
-            React.createElement(ViperjsOutputParseButton)
+            React.createElement(ViperjsOutputParseButton),
+            React.createElement(ViperjsOutputHistoryTokenizeds)
         );
     }
 }
