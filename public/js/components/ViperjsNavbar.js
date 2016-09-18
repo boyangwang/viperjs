@@ -11,7 +11,7 @@ class ViperjsNavbar extends React.Component {
             verticalAlign: 'baseline',
         };
         const navbarStyle = Object.assign({}, commonMarginPaddingVerticalAlignBoxSizingStyle, {
-            background: 'rgba(55,61,73,0.975)',
+            background: 'rgb(47, 49, 41)',
             color: '#fff',
             fontSize: '100%',
             height: '3.75em',
