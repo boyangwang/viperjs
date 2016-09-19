@@ -12,7 +12,7 @@ class ViperjsInputToggleHistoryInputsButton extends React.Component {
                     });
                 },
             },
-            `${this.props.isShowHistoryInputs ? 'Hide' : 'Show'} History Inputs`
+            `${this.props.isShowHistoryInputs ? 'Hide' : 'Show'} Inputs`
         );
     }
 }

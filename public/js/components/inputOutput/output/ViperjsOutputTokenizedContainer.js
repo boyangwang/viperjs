@@ -15,10 +15,12 @@ class ViperjsOutputTokenizedContainer extends React.Component {
                 'div', {
                     style: {
                         width: '100%',
+                        position: 'relative',
                     },
                 },
                 React.createElement(ViperjsOutputParseButton),
-                React.createElement('div', { className: 'or' }),
+                React.createElement('div', { className: 'bar' }),
+                React.createElement('circle', { className: 'circle' }),
                 React.createElement(ViperjsInputToggleHistoryTokenizedsButton)
             ),
             React.createElement(ViperjsOutputHistoryTokenizeds)

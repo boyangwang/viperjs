@@ -15,10 +15,12 @@ class ViperjsInput extends React.Component {
                 'div', {
                     style: {
                         width: '100%',
+                        position: 'relative',
                     },
                 },
                 React.createElement(ViperjsInputTokenizeButton),
-                React.createElement('div', { className: 'or' }),
+                React.createElement('div', { className: 'bar' }),
+                React.createElement('circle', { className: 'circle' }),
                 React.createElement(ViperjsInputToggleHistoryInputsButton)
             ),
             React.createElement(ViperjsInputHistoryInputs)
