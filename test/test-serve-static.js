@@ -2,7 +2,7 @@ import req from 'request-promise';
 import fs from 'fs';
 import path from 'path';
 import { expect } from 'chai';
-import app from '../app.js';
+import app from '../server/app.js';
 
 describe('ViperJS integration test', () => {
     before((done) => {
