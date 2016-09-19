@@ -1,5 +1,4 @@
 node_modules/
-public/js/bundle.js
+public/build/*
 *.log
 *npm-debug.log*
-app.bundle.js

@@ -17,11 +17,14 @@ module.exports = {
         }, {
             test: /\.json$/,
             loader: 'json-loader',
+        }, {
+            test: /\.(jpe?g|png|gif|svg|eot|woff|woff2|ttf)$/i,
+            loader: 'url-loader?limit=25000',
         }],
     },
     entry: path.join(__dirname, './public/js/main.js'),
     output: {
-        path: path.join(__dirname, './public/js/'),
+        path: path.join(__dirname, './public/build'),
         filename: 'bundle.js',
     },
 };
