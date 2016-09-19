@@ -2,12 +2,12 @@
     width: 100%;
     vertical-align:top;
     box-sizing: border-box;
+    padding: 2em 1em;
 }
 @media (min-width: 768px) {
     .viperjs-input-container, .viperjs-output-tokenized-container, .viperjs-output-parsed-container {
         width: 33.3%;
         display: inline-block;
-        padding: 1em;
     }
 }
 .viperjs-input-output .button {
