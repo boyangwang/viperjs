@@ -5,7 +5,7 @@ class ViperjsOutputParseButton extends React.Component {
     render() {
         return React.createElement(
             'button', {
-                className: 'viperjs-output-parse-button',
+                className: 'viperjs-output-parse-button left button',
                 onClick: () => {
                     this.props.dispatch({
                         type: 'parse',
