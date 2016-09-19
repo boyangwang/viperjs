@@ -12,6 +12,8 @@
     "test": "npm run mocha && npm run casper",
     "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --watch",
     "webpack": "node ./node_modules/webpack/bin/webpack.js",
+    "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --progress --colors --watch",
+    "webpack": "node ./node_modules/webpack/bin/webpack.js --progress --colors",
     "eslint": "node ./node_modules/eslint/bin/eslint.js --fix",
     "eslint-all": "node ./node_modules/eslint/bin/eslint.js --fix ."
   },
@@ -35,6 +37,7 @@
   "dependencies": {
     "ace-builds": "^1.2.5",
     "babel-polyfill": "^6.13.0",
+    "babel-register": "^6.14.0",
     "brace": "^0.8.0",
     "deep-freeze": "0.0.1",
     "esprima": "^3.0.0",
@@ -61,6 +64,7 @@
     "eslint-plugin-jsx-a11y": "^2.2.2",
     "eslint-plugin-react": "^6.2.1",
     "forever": "^0.15.2",
+    "json-loader": "^0.5.4",
     "mocha": "^3.0.2",
     "phantomjs-prebuilt": "^2.1.12",
     "redux-devtools": "^3.3.1",
