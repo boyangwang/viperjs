@@ -5,7 +5,7 @@ class ViperjsInputToggleHistoryParsedsButton extends React.Component {
     render() {
         return React.createElement(
             'button', {
-                className: 'viperjs-input-toggle-history-parseds-button right button',
+                className: 'viperjs-input-toggle-history-parseds-button full button',
                 onClick: () => {
                     this.props.dispatch({
                         type: 'toggleHistoryParseds',

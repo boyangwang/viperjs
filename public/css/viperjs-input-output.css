@@ -16,7 +16,6 @@
     border: 0;
     color: rgb(47, 49, 41);
     display: inline-block;
-    width: calc(50% - 3px);
     cursor: auto;
     font-size: 16px;
     height: 40px;
@@ -30,13 +29,20 @@
     background-color: transparent;
     color: #ffffff;
 }
+.viperjs-input-output .full.button {
+    border-radius: 0 0 0.6em 0.6em;
+    box-shadow: 0 0 0 2px rgb(47, 49, 41) inset;
+    width: 100%;
+}
 .viperjs-input-output .left.button {
     border-radius: 0 0 0 0.6em;
     box-shadow: 1px 0 0 2px rgb(47, 49, 41) inset;
+    width: calc(50% - 3px);
 }
 .viperjs-input-output .right.button {
     border-radius: 0 0 0.6em 0;
     box-shadow: -1px 0 0 2px rgb(47, 49, 41) inset;
+    width: calc(50% - 3px);
 }
 .viperjs-input-output .or {
     height: 40px;
