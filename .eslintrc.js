@@ -28,6 +28,7 @@ module.exports = {
         "no-use-before-define": ["error", { "functions": false, "classes": false }]
     },
     'parserOptions': {
+        "ecmaVersion": 6,
         'sourceType': 'script'
     }
 };
