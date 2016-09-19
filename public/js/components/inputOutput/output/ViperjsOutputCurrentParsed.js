@@ -1,10 +1,9 @@
-'use strict';
-const React = require('react');
-const ReactRedux = require('react-redux');
-const viperjsUtil = require('../../viperjs-util.js');
-const Ace = require('brace');
-require('brace/mode/json');
-require('brace/theme/monokai');
+import 'brace/mode/json';
+import 'brace/theme/monokai';
+import React from 'react';
+import { connect } from 'react-redux';
+import Ace from 'brace';
+import viperjsUtil from '../../../viperjs-util.js';
 
 class ViperjsOutputCurrentParsed extends React.Component {
     componentDidMount() {
@@ -38,4 +37,5 @@ const mapStateToProps = (state) => {
         historyParseds: state.historyParseds,
     };
 };
-module.exports = ReactRedux.connect(mapStateToProps)(ViperjsOutputCurrentParsed);
+
+export default connect(mapStateToProps)(ViperjsOutputCurrentParsed);

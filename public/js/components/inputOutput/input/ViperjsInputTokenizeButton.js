@@ -1,6 +1,5 @@
-'use strict';
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
 
 class ViperjsInputTokenizeButton extends React.Component {
     render() {
@@ -19,4 +18,5 @@ class ViperjsInputTokenizeButton extends React.Component {
 ViperjsInputTokenizeButton.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
 };
-module.exports = ReactRedux.connect()(ViperjsInputTokenizeButton);
+
+export default connect()(ViperjsInputTokenizeButton);

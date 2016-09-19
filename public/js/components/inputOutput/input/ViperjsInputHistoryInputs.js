@@ -1,6 +1,5 @@
-'use strict';
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
 
 class ViperjsInputHistoryInputs extends React.Component {
     render() {
@@ -20,4 +19,5 @@ const mapStateToProps = (state) => {
         historyInputs: state.historyInputs,
     };
 };
-module.exports = ReactRedux.connect(mapStateToProps)(ViperjsInputHistoryInputs);
+
+export default connect(mapStateToProps)(ViperjsInputHistoryInputs);

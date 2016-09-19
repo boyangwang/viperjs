@@ -1,7 +1,6 @@
-'use strict';
-const React = require('react');
-const ViperjsNavbar = require('./ViperjsNavbar.js');
-const ViperjsInputOutput = require('./ViperjsInputOutput.js');
+import React from 'react';
+import ViperjsNavbar from './ViperjsNavbar.js';
+import ViperjsInputOutput from './inputOutput/ViperjsInputOutput.js';
 
 class ViperjsApp extends React.Component {
     render() {
@@ -14,4 +13,5 @@ class ViperjsApp extends React.Component {
         );
     }
 }
-module.exports = ViperjsApp;
+
+export default ViperjsApp;

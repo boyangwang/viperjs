@@ -1,8 +1,7 @@
-'use strict';
-const React = require('react');
-const ViperjsInput = require('./input/ViperjsInputContainer.js');
-const ViperjsOutputTokenizedContainer = require('./output/ViperjsOutputTokenizedContainer.js');
-const ViperjsOutputParsedContainer = require('./output/ViperjsOutputParsedContainer.js');
+import React from 'react';
+import ViperjsInput from './input/ViperjsInputContainer.js';
+import ViperjsOutputTokenizedContainer from './output/ViperjsOutputTokenizedContainer.js';
+import ViperjsOutputParsedContainer from './output/ViperjsOutputParsedContainer.js';
 
 class ViperjsInputOutput extends React.Component {
     render() {
@@ -19,4 +18,5 @@ class ViperjsInputOutput extends React.Component {
         );
     }
 }
-module.exports = ViperjsInputOutput;
+
+export default ViperjsInputOutput;

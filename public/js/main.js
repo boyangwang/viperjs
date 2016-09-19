@@ -1,14 +1,13 @@
-'use strict';
-require('../css/main.css');
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Redux = require('redux');
-const ReactRedux = require('react-redux');
-const ViperjsApp = require('./components/ViperjsApp.js');
-const ViperjsReducer = require('./reducers/ViperjsReducer.js');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import ViperjsApp from './components/ViperjsApp.js';
+import { reducer, initialState } from './reducers/ViperjsReducer.js';
+import '../css/main.css';
 
-const ViperjsStore = Redux.createStore(ViperjsReducer.reducer, ViperjsReducer.initialState,
+const ViperjsStore = createStore(reducer, initialState,
     window.devToolsExtension && window.devToolsExtension());
-ReactDOM.render(React.createElement(ReactRedux.Provider, {
+ReactDOM.render(React.createElement(Provider, {
     store: ViperjsStore,
 }, React.createElement(ViperjsApp)), document.getElementById('viperjs-wrapper'));

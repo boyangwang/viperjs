@@ -1,8 +1,7 @@
-'use strict';
-const React = require('react');
-const ViperjsOutputCurrentTokenized = require('./ViperjsOutputCurrentTokenized.js');
-const ViperjsOutputHistoryTokenizeds = require('./ViperjsOutputHistoryTokenizeds.js');
-const ViperjsOutputParseButton = require('./ViperjsOutputParseButton.js');
+import React from 'react';
+import ViperjsOutputCurrentTokenized from './ViperjsOutputCurrentTokenized.js';
+import ViperjsOutputHistoryTokenizeds from './ViperjsOutputHistoryTokenizeds.js';
+import ViperjsOutputParseButton from './ViperjsOutputParseButton.js';
 
 class ViperjsOutputTokenizedContainer extends React.Component {
     render() {
@@ -16,4 +15,5 @@ class ViperjsOutputTokenizedContainer extends React.Component {
         );
     }
 }
-module.exports = ViperjsOutputTokenizedContainer;
+
+export default ViperjsOutputTokenizedContainer;

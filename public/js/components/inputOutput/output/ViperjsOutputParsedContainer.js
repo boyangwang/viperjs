@@ -1,7 +1,6 @@
-'use strict';
-const React = require('react');
-const ViperjsOutputCurrentParsed = require('./ViperjsOutputCurrentParsed.js');
-const ViperjsOutputHistoryParseds = require('./ViperjsOutputHistoryParseds.js');
+import React from 'react';
+import ViperjsOutputCurrentParsed from './ViperjsOutputCurrentParsed.js';
+import ViperjsOutputHistoryParseds from './ViperjsOutputHistoryParseds.js';
 
 class ViperjsOutputParsedContainer extends React.Component {
     render() {
@@ -14,4 +13,5 @@ class ViperjsOutputParsedContainer extends React.Component {
         );
     }
 }
-module.exports = ViperjsOutputParsedContainer;
+
+export default ViperjsOutputParsedContainer;

@@ -1,8 +1,7 @@
-'use strict';
-const React = require('react');
-const ViperjsInputEditor = require('./ViperjsInputEditor.js');
-const ViperjsInputTokenizeButton = require('./ViperjsInputTokenizeButton.js');
-const ViperjsInputHistoryInputs = require('./ViperjsInputHistoryInputs.js');
+import React from 'react';
+import ViperjsInputEditor from './ViperjsInputEditor.js';
+import ViperjsInputTokenizeButton from './ViperjsInputTokenizeButton.js';
+import ViperjsInputHistoryInputs from './ViperjsInputHistoryInputs.js';
 
 class ViperjsInput extends React.Component {
     render() {
@@ -16,4 +15,5 @@ class ViperjsInput extends React.Component {
         );
     }
 }
-module.exports = ViperjsInput;
+
+export default ViperjsInput;

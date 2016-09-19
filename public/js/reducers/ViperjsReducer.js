@@ -1,8 +1,7 @@
-'use strict';
-const esprima = require('esprima');
-const viperjsUtil = require('../viperjs-util.js');
+import esprima from 'esprima';
+import viperjsUtil from '../viperjs-util.js';
 
-module.exports.initialState = {
+const initialState = {
     historyInputs: [],
     currentInput: '',
     historyTokenizeds: [],
@@ -10,13 +9,13 @@ module.exports.initialState = {
 };
 const actionReducers = {};
 let nextId = 0;
-module.exports.reducer = (oldState, action) => {
+function reducer(oldState, action) {
     if (Object.keys(actionReducers).includes(action.type)) {
         return actionReducers[action.type](oldState, action, Object.assign({}, oldState))
             || oldState;
     }
     return oldState;
-};
+}
 actionReducers.input = (oldState, action, newState) => {
     const input = action.value;
     if (input && oldState.currentInput !== input) {
@@ -62,3 +61,5 @@ actionReducers.parse = (oldState, action, newState) => {
         return newState;
     }
 };
+
+export { reducer, initialState };

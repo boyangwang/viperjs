@@ -1,6 +1,5 @@
-'use strict';
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
 
 class ViperjsOutputParseButton extends React.Component {
     render() {
@@ -19,4 +18,5 @@ class ViperjsOutputParseButton extends React.Component {
 ViperjsOutputParseButton.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
 };
-module.exports = ReactRedux.connect()(ViperjsOutputParseButton);
+
+export default connect()(ViperjsOutputParseButton);

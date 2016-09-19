@@ -1,6 +1,5 @@
-'use strict';
-const React = require('react');
-const ReactRedux = require('react-redux');
+import React from 'react';
+import { connect } from 'react-redux';
 
 class ViperjsOutputHistoryParseds extends React.Component {
     render() {
@@ -20,4 +19,5 @@ const mapStateToProps = (state) => {
         historyParseds: state.historyParseds,
     };
 };
-module.exports = ReactRedux.connect(mapStateToProps)(ViperjsOutputHistoryParseds);
+
+export default connect(mapStateToProps)(ViperjsOutputHistoryParseds);

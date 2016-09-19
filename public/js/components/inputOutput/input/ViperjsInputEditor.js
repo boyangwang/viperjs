@@ -1,9 +1,8 @@
-'use strict';
-const React = require('react');
-const ReactRedux = require('react-redux');
-const Ace = require('brace');
-require('brace/mode/javascript');
-require('brace/theme/monokai');
+import React from 'react';
+import { connect } from 'react-redux';
+import Ace from 'brace';
+import 'brace/mode/javascript';
+import 'brace/theme/monokai';
 
 class ViperjsInputEditor extends React.Component {
     componentDidMount() {
@@ -32,4 +31,5 @@ class ViperjsInputEditor extends React.Component {
 ViperjsInputEditor.propTypes = {
     dispatch: React.PropTypes.func.isRequired,
 };
-module.exports = ReactRedux.connect()(ViperjsInputEditor);
+
+export default connect()(ViperjsInputEditor);

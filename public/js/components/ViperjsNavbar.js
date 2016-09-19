@@ -1,5 +1,4 @@
-'use strict';
-const React = require('react');
+import React from 'react';
 
 class ViperjsNavbar extends React.Component {
     render() {
@@ -103,4 +102,5 @@ class ViperjsNavbar extends React.Component {
         );
     }
 }
-module.exports = ViperjsNavbar;
+
+export default ViperjsNavbar;
