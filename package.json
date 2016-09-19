@@ -10,8 +10,6 @@
     "mocha": "node ./node_modules/mocha/bin/mocha",
     "casper": "npm start && sleep 2 && python ./node_modules/casperjs/bin/casperjs test ./test/casper/tests.js && sleep 20 && npm stop",
     "test": "npm run mocha && npm run casper",
-    "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --watch",
-    "webpack": "node ./node_modules/webpack/bin/webpack.js",
     "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --progress --colors --watch",
     "webpack": "node ./node_modules/webpack/bin/webpack.js --progress --colors",
     "eslint": "node ./node_modules/eslint/bin/eslint.js --fix",
