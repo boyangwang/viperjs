@@ -6,6 +6,7 @@ const initialState = {
     currentInput: '',
     historyTokenizeds: [],
     historyParseds: [],
+    isShowHistoryInputs: false,
 };
 const actionReducers = {};
 let nextId = 0;
@@ -60,6 +61,10 @@ actionReducers.parse = (oldState, action, newState) => {
         }
         return newState;
     }
+};
+actionReducers.toggleHistoryInputs = (oldState, action, newState) => {
+    newState.isShowHistoryInputs = !oldState.isShowHistoryInputs;
+    return newState;
 };
 
 export { reducer, initialState };

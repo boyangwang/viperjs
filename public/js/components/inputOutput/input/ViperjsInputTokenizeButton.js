@@ -5,7 +5,7 @@ class ViperjsInputTokenizeButton extends React.Component {
     render() {
         return React.createElement(
             'button', {
-                className: 'viperjs-input-tokenize-button',
+                className: 'viperjs-input-tokenize-button left button',
                 onClick: () => {
                     this.props.dispatch({
                         type: 'tokenize',

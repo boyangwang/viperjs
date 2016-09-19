@@ -7,12 +7,7 @@ describe('State reducer', () => {
         state = initialState;
     });
     it('should start with initialState', () => {
-        expect(state).deep.equal({
-            historyInputs: [],
-            currentInput: '',
-            historyTokenizeds: [],
-            historyParseds: [],
-        });
+        expect(state).deep.equal(initialState);
     });
     it('should ignore unknown action type', () => {
         const newState = reducer(state, { type: 'xxx', value: 'xxx' });
