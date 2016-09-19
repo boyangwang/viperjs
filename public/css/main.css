@@ -3,4 +3,6 @@
 
 body {
     margin: 0;
+    color: rgb(255, 255, 255);
+    background: url("/img/blackfelt.png") repeat rgb(0, 0, 0); /* Background pattern from subtlepatterns.com */
 }
