@@ -8,6 +8,7 @@ const initialState = {
     historyParseds: [],
     isShowHistoryInputs: false,
     isShowHistoryTokenizeds: false,
+    isShowHistoryParseds: false,
 };
 const actionReducers = {};
 let nextId = 0;
@@ -69,6 +70,10 @@ actionReducers.toggleHistoryInputs = (oldState, action, newState) => {
 };
 actionReducers.toggleHistoryTokenizeds = (oldState, action, newState) => {
     newState.isShowHistoryTokenizeds = !oldState.isShowHistoryTokenizeds;
+    return newState;
+};
+actionReducers.toggleHistoryParseds = (oldState, action, newState) => {
+    newState.isShowHistoryParseds = !oldState.isShowHistoryParseds;
     return newState;
 };
 

@@ -6,6 +6,9 @@ class ViperjsOutputHistoryParseds extends React.Component {
         return React.createElement(
             'div', {
                 className: 'viperjs-output-history-parseds',
+                style: {
+                    display: this.props.isShowHistoryParseds ? 'block' : 'none',
+                },
             },
             JSON.stringify(this.props.historyParseds, null, 2)
         );
@@ -13,10 +16,12 @@ class ViperjsOutputHistoryParseds extends React.Component {
 }
 ViperjsOutputHistoryParseds.propTypes = {
     historyParseds: React.PropTypes.arrayOf(React.PropTypes.object),
+    isShowHistoryParseds: React.PropTypes.bool,
 };
 const mapStateToProps = (state) => {
     return {
         historyParseds: state.historyParseds,
+        isShowHistoryParseds: state.isShowHistoryParseds,
     };
 };
 
