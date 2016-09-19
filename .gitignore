@@ -2,3 +2,4 @@ node_modules/
 public/js/bundle.js
 *.log
 *npm-debug.log*
+app.bundle.js
