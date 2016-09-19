@@ -1,7 +1,5 @@
-'use strict';
-const expect = require('chai').expect;
-const reducer = require('../public/js/reducers/ViperjsReducer.js').reducer;
-const initialState = require('../public/js/reducers/ViperjsReducer.js').initialState;
+import { expect } from 'chai';
+import { reducer, initialState } from '../public/js/reducers/ViperjsReducer.js';
 
 describe('State reducer', () => {
     let state;

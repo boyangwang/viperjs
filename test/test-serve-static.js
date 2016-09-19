@@ -1,9 +1,8 @@
-'use strict';
-const expect = require('chai').expect;
-const app = require('../app.js');
-const req = require('request-promise');
-const fs = require('fs');
-const path = require('path');
+import req from 'request-promise';
+import fs from 'fs';
+import path from 'path';
+import { expect } from 'chai';
+import app from '../app.js';
 
 describe('ViperJS integration test', () => {
     before((done) => {
@@ -36,12 +35,12 @@ describe('ViperJS integration test', () => {
                 expect.fail();
             } else {
                 for (const file of files) {
-                    if (!fs.statSync(path.join(directory, file)).isDirectory()) {
+                    if (fs.statSync(path.join(directory, file)).isDirectory()) {
+                        expectServeStaticFilesRecursive(path.join(directory, file));
+                    } else if (!/^\./.test(file)) {
                         const currentFilePath = path.join(directory, file);
                         expectServeStaticFile(`http://localhost:7030/${path.relative(
                             publicDirectoryPath, currentFilePath).replace(/\\/g, '/')}`, currentFilePath);
-                    } else {
-                        expectServeStaticFilesRecursive(path.join(directory, file));
                     }
                 }
             }
