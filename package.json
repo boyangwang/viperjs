@@ -13,7 +13,10 @@
     "webpack-watch": "node ./node_modules/webpack/bin/webpack.js --progress --colors --watch",
     "webpack": "node ./node_modules/webpack/bin/webpack.js --progress --colors",
     "eslint": "node ./node_modules/eslint/bin/eslint.js --fix",
-    "eslint-all": "node ./node_modules/eslint/bin/eslint.js --fix ."
+    "eslint-all": "node ./node_modules/eslint/bin/eslint.js --fix .",
+    "deploy-staging": "./node_modules/.bin/fly deploy:staging",
+    "clean-deploy-staging": "./node_modules/.bin/fly clean-deploy:staging",
+    "start-staging": "./node_modules/.bin/fly start:staging"
   },
   "babel": {
     "presets": [

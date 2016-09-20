@@ -7,7 +7,7 @@ plan.target('staging', {
     privateKey: 'C:\\Users\\wangb\\.ssh\\id_rsa',
 });
 const gitDir = '/var/www/viperjs';
-plan.remote(['clean-deploy', 'deploy'], (remote) => {
+plan.remote(['clean-deploy', 'deploy', 'start'], (remote) => {
     remote.sudo(`npm --prefix ${gitDir} stop`, { failsafe: true });
 });
 plan.remote(['clean-deploy'], (remote) => {
