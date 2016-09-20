@@ -8,11 +8,11 @@ plan.target('staging', {
 });
 const gitDir = '/var/www/viperjs';
 plan.remote(['clean-deploy', 'deploy'], (remote) => {
-    remote.sudo(`npm --prefix ${gitDir} stop`);
+    remote.sudo(`npm --prefix ${gitDir} stop`, { failsafe: true });
 });
 plan.remote(['clean-deploy'], (remote) => {
     remote.rm(`-rf -- ${gitDir}`);
-    remote.sudo('cd /var/www && git clone git@github.com:boyangwang/viperjs.git');
+    remote.sudo('cd /var/www && git clone https://github.com/boyangwang/viperjs.git');
 });
 plan.remote(['clean-deploy', 'deploy'], (remote) => {
     remote.sudo(`cd ${gitDir} && git pull origin master`);
