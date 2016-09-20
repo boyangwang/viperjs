@@ -76,5 +76,18 @@ actionReducers.toggleHistoryParseds = (oldState, action, newState) => {
     newState.isShowHistoryParseds = !oldState.isShowHistoryParseds;
     return newState;
 };
+actionReducers.toggleHistoryInputs = (oldState, action, newState) => {
+    newState.isShowHistoryInputs = !oldState.isShowHistoryInputs;
+    return newState;
+};
+actionReducers.toggleHistoryInputsRecord = (oldState, action, newState) => {
+    newState.historyInputs = [...oldState.historyInputs];
+    const recordToChange = newState.historyInputs.find(input => input.id === action.value);
+    if (recordToChange) {
+        recordToChange.isOpened = !recordToChange.isOpened;
+        return newState;
+    }
+    return oldState;
+};
 
 export { reducer, initialState };
