@@ -6,7 +6,7 @@
   "scripts": {
     "full-build": "npm install && npm run webpack && npm run eslint-all && npm test",
     "start": "forever start -c 'node --use-strict' -a -l ./viperjs.log -o ./viperjs.log -e ./viperjs.log --uid viperjs server/app.js",
-    "stop": "forever stop viperjs",
+    "stop": "forever stop viperjs || true",
     "mocha": "node ./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
     "casper": "npm start && sleep 2 && python ./node_modules/casperjs/bin/casperjs test ./test/casper/tests.js && sleep 20 && npm stop",
     "test": "npm run mocha && npm run casper",
