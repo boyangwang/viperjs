@@ -11,8 +11,8 @@ describe('ViperJS integration test', () => {
     });
     const publicDirectoryPath = path.join(__dirname, '../public');
     function expectServeStaticFile(urlpath, filepath) {
-        describe('should server static files', () => {
-            it(`should serve ${filepath}`, (done) => {
+        describe('should serve static files', () => {
+            it(`${filepath}`, (done) => {
                 req({ uri: urlpath })
                     .then(res => new Promise((resolve, reject) => {
                         fs.readFile(filepath, 'utf8', (err, data) => {
