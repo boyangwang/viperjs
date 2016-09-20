@@ -25,10 +25,13 @@ module.exports = {
         'no-param-reassign': ['error', {'props': false}],
         'consistent-return': 'off',
         'no-plusplus': 'off',
-        "no-use-before-define": ["error", { "functions": false, "classes": false }]
+        'no-use-before-define': ['error', { 'functions': false, 'classes': false }]
     },
     'parserOptions': {
-        "ecmaVersion": 6,
+        'ecmaVersion': 6,
+        'ecmaFeatures': {
+            'experimentalObjectRestSpread': true
+        },
         'sourceType': 'module'
     }
 };
