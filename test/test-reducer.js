@@ -15,14 +15,14 @@ describe('State reducer', () => {
     });
     it('should handle toggleHistoryInputs', () => {
         const newState = reducer(state, { type: 'toggleHistoryInputs'});
-        expect(newState.isShowHistoryInputs).toEqual(true);
+        expect(newState.isShowHistoryInputs).equal(true);
     });
     it('should handle toggleHistoryTokenizeds', () => {
         const newState = reducer(state, { type: 'toggleHistoryTokenizeds'});
-        expect(newState.isShowHistoryTokenizeds).toEqual(true);
+        expect(newState.isShowHistoryTokenizeds).equal(true);
     });
     it('should handle toggleHistoryParseds', () => {
         const newState = reducer(state, { type: 'toggleHistoryParseds'});
-        expect(newState.isShowHistoryParseds).toEqual(true);
+        expect(newState.isShowHistoryParseds).equal(true);
     });
 });
