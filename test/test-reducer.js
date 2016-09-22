@@ -13,4 +13,8 @@ describe('State reducer', () => {
         const newState = reducer(state, { type: 'xxx', value: 'xxx' });
         expect(newState).equal(state);
     });
+    it('should handle toggleHistoryInputs', () => {
+        const newState = reducer(state, { type: 'toggleHistoryInputs'});
+        expect(newState.isShowHistoryInputs).toEqual(true);
+    });
 });
