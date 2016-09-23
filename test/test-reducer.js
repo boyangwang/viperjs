@@ -50,7 +50,6 @@ describe('State reducer', () => {
     it('reinput without Tokenize', () => {
         const expectedNewState = Object.assign({}, state, { currentInput: 'b' });
         let newState = reducer(state, { type: 'input', value: 'a' });
-        // newState = reducer(newState, { type: 'input', value: '' });
         newState = reducer(newState, { type: 'input', value: 'b' });
         expect(newState).deep.equal(expectedNewState);
     });
@@ -73,4 +72,3 @@ describe('State reducer', () => {
         expect(newState).deep.equal(expectedNewState);
     });
 });
-
