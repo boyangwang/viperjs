@@ -1,6 +1,6 @@
+import esprima from 'esprima';
 import { expect } from 'chai';
 import { reducer, initialState } from '../public/js/reducers/ViperjsReducer.js';
-import esprima from 'esprima';
 
 describe('State reducer', () => {
     let state;
@@ -44,33 +44,33 @@ describe('State reducer', () => {
     it('should handle toggleHistoryParseds: true -> false', () => {
         const oldState = Object.assign({}, state, { isShowHistoryParseds: true });
         const expectedNewState = Object.assign({}, state, { isShowHistoryParseds: false });
-        const newState = reducer(oldState, { type: 'toggleHistoryParseds'});
+        const newState = reducer(oldState, { type: 'toggleHistoryParseds' });
         expect(newState).deep.equal(expectedNewState);
     });
     it('reinput without Tokenize', () => {
         const expectedNewState = Object.assign({}, state, { currentInput: 'b' });
         let newState = reducer(state, { type: 'input', value: 'a' });
-        //newState = reducer(newState, { type: 'input', value: '' });
+        // newState = reducer(newState, { type: 'input', value: '' });
         newState = reducer(newState, { type: 'input', value: 'b' });
         expect(newState).deep.equal(expectedNewState);
     });
     it('input "a" -> Tokenize -> input "b"', () => {
         const expectedNewState = Object.assign({}, state, {
             historyInputs: [{
-                'id': 0,
-                'value': 'a'
-            }], 
+                id: 0,
+                value: 'a',
+            }],
             currentInput: 'b',
             historyTokenizeds: [{
-                'id': 0,
-                'value': esprima.tokenize('a')
-            }]
+                id: 0,
+                value: esprima.tokenize('a'),
+            }],
         });
         let newState = reducer(state, { type: 'input', value: 'a' });
         newState = reducer(newState, { type: 'tokenize' });
-        newState = reducer(newState, { type: 'input', value: '' })
+        newState = reducer(newState, { type: 'input', value: '' });
         newState = reducer(newState, { type: 'input', value: 'b' });
         expect(newState).deep.equal(expectedNewState);
-    })
+    });
 });
 
