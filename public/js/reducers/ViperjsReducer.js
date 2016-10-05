@@ -9,9 +9,9 @@ const initialState = {
     isShowHistoryInputs: false,
     isShowHistoryTokenizeds: false,
     isShowHistoryParseds: false,
+    nextId: 0,
 };
 const actionReducers = {};
-let nextId = 0;
 function reducer(oldState, action) {
     if (Object.keys(actionReducers).includes(action.type)) {
         return actionReducers[action.type](oldState, action, Object.assign({}, oldState))
@@ -21,7 +21,7 @@ function reducer(oldState, action) {
 }
 actionReducers.input = (oldState, action, newState) => {
     const input = action.value;
-    if (input && oldState.currentInput !== input) {
+    if ((input || input === '') && oldState.currentInput !== input) {
         newState.currentInput = input;
         return newState;
     }
@@ -30,7 +30,7 @@ actionReducers.tokenize = (oldState, action, newState) => {
     const lastHistoryInput = viperjsUtil.peek(oldState.historyInputs);
     if (!lastHistoryInput ||
         lastHistoryInput.value !== oldState.currentInput) {
-        const currentId = nextId++;
+        const currentId = newState.nextId++;
         newState.historyInputs = [...oldState.historyInputs,
             { id: currentId, value: oldState.currentInput }];
         const currentInputObj = { id: currentId };
