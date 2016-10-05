@@ -21,7 +21,7 @@ function reducer(oldState, action) {
 }
 actionReducers.input = (oldState, action, newState) => {
     const input = action.value;
-    if (input && oldState.currentInput !== input) {
+    if ((input || input === '') && oldState.currentInput !== input) {
         newState.currentInput = input;
         return newState;
     }
