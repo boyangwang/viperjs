@@ -6,7 +6,7 @@
   "scripts": {
     "full-build": "npm install && npm run webpack && npm run eslint-all && npm test",
     "start": "forever start -c 'node --use-strict' -a -l ./viperjs.log -o ./viperjs.log -e ./viperjs.log --uid viperjs server/app.js",
-    "stop": "forever stop viperjs || true",
+    "stop": "forever stop viperjs",
     "mocha": "node ./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
     "casper": "npm start && sleep 2 && python ./node_modules/casperjs/bin/casperjs test ./test/casper/tests.js && sleep 20 && npm stop",
     "test": "npm run mocha && npm run casper",
@@ -64,7 +64,7 @@
     "casperjs": "^1.1.3",
     "chai": "^3.5.0",
     "css-loader": "^0.25.0",
-    "eslint": "^3.5.0",
+    "eslint": "^3.6.0",
     "eslint-config-airbnb": "^11.1.0",
     "eslint-plugin-import": "^1.15.0",
     "eslint-plugin-jsx-a11y": "^2.2.2",
