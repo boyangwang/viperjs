@@ -27,7 +27,8 @@ module.exports = {
         'no-plusplus': 'off',
         'no-use-before-define': ['error', { 'functions': false, 'classes': false }],
         'max-len': ['error', {'code': 120, 'comments': 120, "ignoreStrings": true, "ignoreTemplateLiterals": true}],
-        'quote-props': 'off'
+        'quote-props': 'off',
+        'no-template-curly-in-string': 'off'
     },
     'parserOptions': {
         'ecmaVersion': 6,
